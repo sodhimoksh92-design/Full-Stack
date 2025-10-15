@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <title>My Portfolio</title>
+
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      /* Navbar Styling */
+      .navbar {
+        background: linear-gradient(90deg, #0d47a1, #1976d2, #42a5f5);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .navbar-brand, .nav-link {
+        color: white !important;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: #ffeb3b !important;
+        transform: scale(1.05);
+      }
+
+      .btn-outline-success {
+        color: #fff;
+        border-color: #fff;
+        transition: all 0.3s ease;
+      }
+
+      .btn-outline-success:hover {
+        background-color: #ffeb3b;
+        color: #000;
+        border-color: #ffeb3b;
+      }
+
+      /* Carousel Styling */
+      .carousel-inner img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        background-color: #000;
+      }
+
+      .carousel-item {
+        text-align: center;
+        background-color: #000;
+      }
+
+      .carousel-item img {
+        max-height: 600px;
+        margin: 0 auto;
+        border-radius: 10px;
+      }
+
+      /* Card Section */
+      .container {
+        margin-top: 80px;
+      }
+
+      .card {
+        border: none;
+        border-radius: 25px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s ease;
+        background-color: #fff;
+      }
+
+      .card:hover {
+        transform: translateY(-12px) scale(1.02);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-title {
+        color: #0d47a1;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .card-text {
+        color: #555;
+        text-align: center;
+        font-size: 15px;
+        text-align: justify;
+
+      }
+
+      .card img {
+        height: 190px;
+        object-fit: contain;
+        background-color: #f0f0f0;
+        border-radius: 20px 20px 0 0;
+        padding: 10px;
+      }
+
+      .btn-primary {
+        background: linear-gradient(90deg, #1976d2, #42a5f5);
+        border: none;
+        border-radius: 8px;
+        width: 100%;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background: linear-gradient(90deg, #42a5f5, #1976d2);
+        transform: scale(1.05);
+      }
+
+      /* Section Title */
+      .qo {
+        text-align: center;
+        text-decoration: underline;
+        font-weight: 700;
+        margin-top: 50px;
+        color: #0d47a1;
+        letter-spacing: 1px;
+      }
+
+      /* Services Section */
+      .container.my-5 img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .container.my-5 img:hover {
+        transform: scale(1.08);
+        box-shadow: 0 6px 20px rgba(25, 118, 210, 0.3);
+      }
+
+      .container.my-5 h5 {
+        font-weight: 600;
+        color: #0d47a1;
+      }
+
+      /* Footer */
+      footer {
+        background: linear-gradient(90deg, #0d47a1, #1976d2, #42a5f5);
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 30px;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2)
+        
+      }
+
+      footer span {
+        color: #ffeb3b;
+      }
+
+      /* Smooth Scroll + Animations */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .fade-in {
+        animation: fadeIn 1.2s ease-in;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .to{
+        text-align: center;
+        text-decoration: underline;
+      }
+      .rm{
+        text-align: left;
+        
+      }
+      .mm{
+        align-content: right;
+        color: #0d47a1;
+
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold fs-4" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="">Full Stack</a></li>
+                <li><a class="dropdown-item" href="#">AI Integration</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Web Designs</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide fade-in" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+          class="active" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="banner 2.0.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="banner3.0.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="banner5.0.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="container fade-in">
+      <div class="row justify-content-center g-4">
+        
+        <div class="col-md-4">
+          <div class="card">
+            <img src="websiteicon.png" class="card-img-top" alt="Full Stack Developer">
+            <div class="card-body">
+              <h5 class="card-title">FULL STACK DEVELOPER</h5>
+              <p class="card-text">I am a passionate Full Stack Developer with experience in building dynamic, responsive,
+                and AI-powered websites.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="ai_icon-removebg-preview.png" class="card-img-top" alt="AI Specialist">
+            <div class="card-body">
+              <h5 class="card-title">AI SPECIALIST</h5>
+              <p class="card-text">Skilled in integrating Artificial Intelligence into web applications to enhance user
+                experience and automation.</p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="webdesigner.png" class="card-img-top" alt="Web Designer">
+            <div class="card-body">
+              <h5 class="card-title">WEB DESIGNER</h5>
+              <p class="card-text">I design clean, modern, and fully responsive user interfaces with a focus on usability
+                and performance.</p>
+              <a href="#" class="btn btn-primary">Portfolio</a>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+
+    <hr><hr>
+    <h5 class="qo">OUR SERVICES</h5>
+
+    <div class="container my-5 fade-in">
+      <div class="row justify-content-center align-items-center text-center">
+
+        <div class="col-md-4 col-sm-6 mb-4">
+          <img src="customised_web-removebg-preview.png" alt="Customised Websites" class="img-fluid mb-3" style="max-height:200px;">
+          <h5>Customised Website Solutions</h5>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4">
+          <img src="mobile_app-removebg-preview.png" alt="Mobile App Development" class="img-fluid mb-3" style="max-height:200px;">
+          <h5>Mobile App Development</h5>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4">
+          <img src="searchengine-removebg-preview.png" alt="SEO" class="img-fluid mb-3" style="max-height:200px;">
+          <h5>Search Engine Optimization</h5>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4">
+          <img src="e_commerce-removebg-preview.png" alt="E-commerce" class="img-fluid mb-3" style="max-height:200px;">
+          <h5>E-commerce Development</h5>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4">
+          <img src="election-removebg-preview.png" alt="Election Campaign" class="img-fluid mb-3" style="max-height:200px;">
+          <h5>Election Campaign</h5>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4">
+          <img src="sales_force-removebg-preview.png" alt="Sales Force" class="img-fluid mb-3" style="max-height:200px;">
+          <h5>Sales Force Solutions</h5>
+        </div>
+        <HR>
+      </div>
+   <hr>
+<h5 class="to">OUR PORTFOLIO</h5>
+
+<div class="container my-5 fade-in">
+  <div class="row justify-content-center g-4">
+
+    <!-- Portfolio Card 1 -->
+    <div class="col-md-4 col-sm-6">
+      <div class="card h-100">
+        <img src="logo family ..JPG" class="card-img-top" alt="Sodhi Family Website">
+        <div class="card-body">
+          <h5 class="card-title">Sodhi Family Official Website</h5>
+          <p class="card-text">
+            I am a Full Stack Web Developer and AI Specialist passionate about creating modern, intelligent, and fully responsive websites. My expertise spans the entire web development process — from designing clean and interactive front-end interfaces using HTML, CSS, JavaScript, Bootstrap, and React, to building powerful back-end systems with Node.js, Express, and MongoDB. I also integrate Artificial Intelligence and automation into my projects to make them smarter, faster, and more efficient.
+One of my proudest projects is the official website of the Sodhi Family of Guru Har Sahai .</p>
+          <a href="https://sodhifamilyofguruharsahai-dotcom.github.io/Gurudwara/" class="btn btn-primary" target="_blank">View Project</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Card 2 -->
+    <div class="col-md-4 col-sm-6">
+      <div class="card h-100">
+        <img src="1600w-19v-U9023UM.webp" class="card-img-top" alt="AI Integration Project">
+        <div class="card-body">
+          <h5 class="card-title">Sodhi family Official website</h5>
+          <p class="card-text">
+          I am a Full Stack Developer skilled in building dynamic, responsive, and user-friendly web applications. I have created a complete food website featuring a modern design, smooth functionality, and seamless user experience. My work covers both front-end and back-end development, including technologies like HTML, CSS, JavaScript, and database integration. I focus on writing clean, efficient code and creating websites that are visually appealing, fast, and fully responsive across all devices.U can contact us .
+          for full responsive websites 
+          </p>
+          <a href="https://sodhimoksh92-design.github.io/food-website/" class="btn btn-primary">View Project</a>
+        </div>
+      </div>
+    </div>
+     
+      </div>
+    </div>
+    
+  </div>
+</div>
+ </div>
+ <!--footer-->
+ 
+
+
+    <!-- Footer -->
+    <footer>
+        <h4 class="rm">For enquiry Contact +91 8054300024</h4>
+      © 2025 <span>My Portfolio</span> | Designed with ❤️ by Me
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+  
